@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/*
+*
+* @author Nikos Kontonasios
+*/
+
 .modal{
 	box-sizing: border-box;
 	position: fixed;
@@ -78,14 +83,9 @@ table{
 	overflow: hidden;
 }
 
-
-
 th{
 	font-weight: bold;
 }
-
-
-
 
 tr:nth-child(even){
 	background-color: #D6EEEE;

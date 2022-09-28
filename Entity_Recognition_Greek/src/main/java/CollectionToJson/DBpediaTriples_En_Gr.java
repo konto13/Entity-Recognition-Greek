@@ -15,7 +15,8 @@ import com.google.gson.JsonObject;
 
 /**
  *
- * @author mountant
+ * @author Michalis Mountantonakis
+ * @co-author Nikos Kontonasios
  */
 public class DBpediaTriples_En_Gr {
 
@@ -27,8 +28,6 @@ public class DBpediaTriples_En_Gr {
         String endpoint = "https://dbpedia.org/sparql";
         String query = "Select <" + entity + "> ?p ?o where{<" + entity + "> ?p ?o}";
         db.dbpediaQuery(query, endpoint);
-        //query = "select ?o where { <"+entity+"> <http://xmlns.com/foaf/0.1/depiction> ?o}";
-        //db.dbpediaQuery(query, endpoint);
         System.out.println("\n===================\n");
         //For finding the Greek URI in English
         System.out.println("Retrieve Nikos Kazantzakis URL in greek DBpedia");
@@ -69,7 +68,6 @@ public class DBpediaTriples_En_Gr {
         BufferedReader in = new BufferedReader(isr);
 
         String input;
-        String resultsString = "";
         int count = 0;
 		JsonArray ja = new JsonArray();
         while ((input = in.readLine()) != null) {
@@ -79,11 +77,8 @@ public class DBpediaTriples_En_Gr {
             }
             String[] data = input.split(",");
             if (data.length == 3) { //for finding the triples
-                String subject = data[0].replace("\"", "");
                 String predicate = data[1].replace("\"", "");
                 String object = data[2].replace("\"", "");
-                //System.out.println(subject+ "\t" + predicate + "\t" + object);
-                resultsString = subject+ "\t" + predicate + "\t" + object;
                 JsonObject jo = new JsonObject();
         		jo.addProperty("predicate", predicate);
         		jo.addProperty("object", object);
@@ -99,7 +94,5 @@ public class DBpediaTriples_En_Gr {
         is.close();
 
         return ja.toString();
-
     }
-
 }

@@ -98,17 +98,17 @@
 
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/modal.js"></script>
-	<script src="assets/js/sampleTexts.js"></script>
-	<script src="assets/js/entitiesInHTML.js"></script>
-	<script src="assets/js/babelfy.js"></script>
-	<script src="assets/js/translationWithLODsyndesisIE.js"></script>
+	<script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/jquery.dropotron.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/browser.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/breakpoints.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/util.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/modal.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/sampleTexts.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/entitiesInHTML.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/babelfy.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/js/translationWithLODsyndesisIE.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 

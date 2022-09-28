@@ -10,34 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-//import Evaluation.Evaluation;
 import CollectionToJson.GetDBpediaAbstract;
 import CollectionToJson.GetDBpediaImage;
 import LODsyndesisIE.LODsyndesisIERestClient_EntityRecognition;
 
 
 /**
- * Servlet implementation class LODsyndesisRestClientServlet
+ * 
+ * @author Nikos Kontonasios
  */
 @WebServlet("/LODsyndesisRestClientServlet")
 public class LODsyndesisRestClientServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LODsyndesisRestClientServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -53,12 +37,9 @@ public class LODsyndesisRestClientServlet extends HttpServlet {
 		String ERTools="DBSWAT";
         String output1=chanel.getEntitiesOfText(text,ERTools,"false","false");
         JsonArray ja = chanel.createEntitiesJSON(output1);
-        //chanel.printEntities(output1,ERTools);
         
         GetDBpediaImage image = new GetDBpediaImage();
 		GetDBpediaAbstract abstr = new GetDBpediaAbstract();
-		//Evaluation eval = new Evaluation();
-		//eval.evaluate(ja);
 		for(int i = 0; i < ja.size(); i++) {
 			JsonObject jo = (JsonObject) ja.get(i);
 			String entity = jo.get("url").getAsString();
@@ -72,8 +53,6 @@ public class LODsyndesisRestClientServlet extends HttpServlet {
 	        String abs = abstr.dbpediaQuery(abs_query, abs_endpoint);
 	        jo.add("images", img);
 	        jo.addProperty("abstract", abs);
-	        //jo.addProperty("url", greekURI);
-	        //System.out.println(jo);
 		}
 		response.getWriter().write(ja.toString());
 	}

@@ -25,10 +25,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-//import org.codehaus.jettison.json.JSONArray;
-//import org.codehaus.jettison.json.JSONException;
-//import org.codehaus.jettison.json.JSONObject;
-//import com.google.gson.JsonParser;
+
 
 /**
  *
@@ -185,7 +182,7 @@ public class LODsyndesisIERestClient_EntityRecognition {
                 + "Falling ill on his return flight, he was transferred to Freiburg, Germany, where he died.";
         text=text.replace(" ","%20");
         
-        // Find the entities of the givenn text, their equivalent URIs and their provenance by using WAT
+        // Find the entities of the given text, their equivalent URIs and their provenance by using WAT
         //String ERTools="WAT";
         //String output1=chanel.getEntitiesOfText(text,ERTools,"false","false");
         //chanel.printEntities(output1,ERTools);

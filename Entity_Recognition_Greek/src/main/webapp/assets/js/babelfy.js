@@ -1,3 +1,8 @@
+/*
+*
+* @author Nikos Kontonasios
+*/
+
 function sendEntities(entities) {
 	var xhr = new XMLHttpRequest();
 	xhr.addEventListener("load", function() {

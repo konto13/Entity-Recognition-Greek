@@ -1,3 +1,8 @@
+/*
+*
+* @author Nikos Kontonasios
+*/
+
 function findEntitiesWithTranslation() {
 	// removes the entities of the previous search from the web app
 	removeEntities();

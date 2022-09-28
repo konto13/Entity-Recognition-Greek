@@ -15,7 +15,8 @@ import com.google.gson.JsonObject;
 
 /**
  *
- * @author mountant
+ * @author Michalis Mountantonakis
+ * @co-author Nikos Kontonasios
  */
 public class GetDBpediaImage {
     
@@ -51,7 +52,6 @@ public class GetDBpediaImage {
         BufferedReader in = new BufferedReader(isr);
 
         String input;
-        String resultsString = "";
         int count = 0;
         JsonArray ja = new JsonArray();
         while ((input = in.readLine()) != null) {
@@ -60,15 +60,9 @@ public class GetDBpediaImage {
                 continue;
             }
                 String imageLink=input.replace("\"","");
-                resultsString = imageLink;
                 JsonObject jo = new JsonObject();
         		jo.addProperty("img", imageLink);
         		ja.add(jo);
-                //in.close();
-                //isr.close();
-                //is.close();
-                //return resultsString;
-                //System.out.println(imageLink);
         }
 
         in.close();

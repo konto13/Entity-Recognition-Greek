@@ -10,6 +10,11 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
+/*
+ * 
+ * @author Michalis Mountantonakis
+ * @co-author Nikos Kontonasios
+ */
 public class GetDBpediaAbstract {
 	/**
     *
@@ -42,7 +47,6 @@ public class GetDBpediaAbstract {
            }
            String[] data = input.split(",");
            if (data.length == 3) { //for finding the triples
-               String subject = data[0].replace("\"", "");
                String predicate = data[1].replace("\"", "");
                String object = data[2].replace("\"", "");
                if(predicate.contains("abstract")) {

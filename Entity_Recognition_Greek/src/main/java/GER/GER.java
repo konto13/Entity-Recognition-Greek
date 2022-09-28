@@ -10,6 +10,10 @@ import it.uniroma1.lcl.babelfy.commons.annotation.SemanticAnnotation;
 import it.uniroma1.lcl.babelfy.core.Babelfy;
 import it.uniroma1.lcl.jlt.util.Language;
 
+/*
+ * 
+ * @author Nikos Kontonasios
+ */
 public class GER {
 	private String inputText;
 	private List<SemanticAnnotation> bfyAnnotations_exact;

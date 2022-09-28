@@ -1,3 +1,8 @@
+/*
+*
+* @author Nikos Kontonasios
+*/
+
 function createModal(url, name) {
 	var xhr = new XMLHttpRequest();
 	xhr.addEventListener("load", function() {

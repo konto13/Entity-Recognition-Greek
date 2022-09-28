@@ -11,33 +11,17 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-//import Evaluation.Evaluation;
 import CollectionToJson.GetDBpediaAbstract;
 import CollectionToJson.GetDBpediaImage;
 
 /**
- * Servlet implementation class AddPropertiesToJsonServlet
+ * 
+ * @author Nikos Kontonasios
  */
 @WebServlet("/AddPropertiesToJsonServlet")
 public class AddPropertiesToJsonServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddPropertiesToJsonServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -52,8 +36,6 @@ public class AddPropertiesToJsonServlet extends HttpServlet {
 		
 		GetDBpediaImage image = new GetDBpediaImage();
 		GetDBpediaAbstract abstr = new GetDBpediaAbstract();
-		//Evaluation eval = new Evaluation();
-		//eval.evaluate(ja);
 		for(int i = 0; i < ja.size(); i++) {
 			JsonObject jo = (JsonObject) ja.get(i);
 			String entity = jo.get("url").getAsString();
