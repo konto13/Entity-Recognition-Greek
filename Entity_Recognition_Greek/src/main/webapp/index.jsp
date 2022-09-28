@@ -52,7 +52,7 @@
 									<li><input type="submit" class="style1"
 										value="Babelfy" onClick="findEntities(); return false;"/></li>
 									<li><input type="submit" class="style1"
-										value="LODSyndesisIE" onClick="findEntitiesWithTranslation(); return false;" /></li>
+										value="LODsyndesisIE" onClick="findEntitiesWithTranslation(); return false;" /></li>
 									<li><input type="reset" class="style2"
 										onClick="removeEntities();" value="Reset" /></li>
 								</ul>
