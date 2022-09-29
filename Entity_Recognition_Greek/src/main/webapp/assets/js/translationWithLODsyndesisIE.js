@@ -22,7 +22,7 @@ function findEntitiesWithTranslation() {
 
 	xhr.open("POST", "https://text-translator2.p.rapidapi.com/translate");
 	xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-	xhr.setRequestHeader("X-RapidAPI-Key", "7e593d7020msh108ceb449958c83p17a525jsn0b0c00d25af6");
+	xhr.setRequestHeader("X-RapidAPI-Key", TEXT_TRANSLATOR_API_KEY);
 	xhr.setRequestHeader("X-RapidAPI-Host", "text-translator2.p.rapidapi.com");
 
 	xhr.send(data);
